@@ -1,12 +1,37 @@
-#include <adder.h>
-
 #include <stdio.h>
+#include <stdlib.h>
+#include <GLFW/glfw3.h>
 
 int main(int argc, char* argv[])
 {
-	printf("Hello cmake\n");
+	GLFWwindow* window;
+    int width, height;
 
-	printf("%f\n", add(42.12f, 3.f));
+    if( !glfwInit() )
+    {
+        fprintf( stderr, "Failed to initialize GLFW\n" );
+        exit( EXIT_FAILURE );
+    }
 
-	return 0;
+    window = glfwCreateWindow( 300, 300, "Gears", NULL, NULL );
+    if (!window)
+    {
+        fprintf( stderr, "Failed to open GLFW window\n" );
+        glfwTerminate();
+        exit( EXIT_FAILURE );
+    }
+
+    // Main loop
+    while( !glfwWindowShouldClose(window) )
+    {
+        // Swap buffers
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    // Terminate GLFW
+    glfwTerminate();
+
+    // Exit program
+    exit( EXIT_SUCCESS );
 }
