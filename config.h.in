@@ -1,0 +1,6 @@
+// the configured options and settings for Tutorial
+#define ModernCmake_VERSION_MAJOR @ModernCmake_VERSION_MAJOR@
+#define ModernCmake_VERSION_MINOR @ModernCmake_VERSION_MINOR@
+
+#cmakedefine USE_ADDER
+
