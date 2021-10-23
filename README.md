@@ -14,9 +14,6 @@ CMake makes build systems better.
 - [x] Link_Libraries
 - [x] Integrate with git-submodules
 - [x] Update submodules via CMakeLists.txt
-- [ ] Set Compiler Flags
-- [ ] Variables
-- [ ] Platform Specific Compilation
-  - [ ] Linux
-  - [ ] Windows
-  - [ ] Android
+- [X] Variables
+- [X] Optional Libraries
+- [X] CPack installer
